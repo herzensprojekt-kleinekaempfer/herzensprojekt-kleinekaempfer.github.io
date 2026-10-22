@@ -63,7 +63,10 @@ nav a{color:var(--on-sky);text-decoration:none;opacity:.85}
 nav a:hover{opacity:1;text-decoration:underline}
 .menu-btn{display:none;margin-left:auto;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:2px solid var(--on-sky);background:transparent;color:var(--on-sky);font:inherit;font-weight:800;cursor:pointer}
 @media (max-width:760px){
-  .menu-btn{display:inline-flex}
+  .menu-btn{display:inline-flex;flex:none;white-space:nowrap}
+  header .wrap{flex-wrap:nowrap}
+  .marke{min-width:0}
+  .marke b{font-size:.98rem}
   nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--sky);flex-direction:column;gap:0;padding:4px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px));box-shadow:0 12px 24px rgba(0,0,0,.25)}
   nav.offen{display:flex}
   nav a{padding:13px 0;border-top:1px solid rgba(255,255,255,.12);font-size:1.05rem;opacity:1}
@@ -347,7 +350,7 @@ footer .wrap > *{min-width:0}
         <figcaption>Spenden pro Tour</figcaption>
         <div class="balken" role="table" aria-label="Spenden pro Tour">
           <div class="zeile" role="row" tabindex="0" title="Spenden-Walk 2025: 2.600 € für das Kinderhospiz Sterntaler"><span role="rowheader">2025<br>Walk</span><div class="spur"><div class="fill" style="width:37.1%"></div><span class="wert" role="cell" style="left:calc(37.1% + 8px)">2.600 €</span></div></div>
-          <div class="zeile" role="row" tabindex="0" title="Radtour 2026: 6.000,10 €"><span role="rowheader">2026<br>Radtour</span><div class="spur"><div class="fill" style="width:85.7%"></div><span class="wert" role="cell" style="left:calc(85.7% + 8px)">6.000,10 €</span></div></div>
+          <div class="zeile" role="row" tabindex="0" title="Radtour 2026: 6.000,10 €"><span role="rowheader">2026<br>Radtour</span><div class="spur"><div class="fill" style="width:85.7%"></div><span class="wert" role="cell" style="right:calc(14.3% + 8px);color:#fff">6.000,10 €</span></div></div>
           <div class="achse" aria-hidden="true"><span></span><div><span>0</span><span>3.500 €</span><span>7.000 €</span></div></div>
         </div>
         <p class="fussnote">Zusammen 8.600,10 €, inklusive der beiden uniVersa-Schecks über je 1.000 €.</p>
@@ -480,7 +483,7 @@ document.getElementById('iban-kopieren').addEventListener('click',function(){
 });
 (function(){
   var btn=document.getElementById('menu-btn'),nav=document.getElementById('hauptmenu');
-  btn.addEventListener('click',function(){var auf=nav.classList.toggle('offen');btn.setAttribute('aria-expanded',auf);btn.textContent=auf?'✕ Schließen':'☰ Menü';});
+  btn.addEventListener('click',function(){var auf=nav.classList.toggle('offen');btn.setAttribute('aria-expanded',auf);btn.textContent=auf?'✕ Menü':'☰ Menü';});
   nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('offen');btn.setAttribute('aria-expanded',false);btn.textContent='☰ Menü';});});
 })();
 (function(){
