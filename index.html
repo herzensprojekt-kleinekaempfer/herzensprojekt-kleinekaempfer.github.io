@@ -156,6 +156,16 @@ section.hell{background:var(--rain)}
 .wege a{color:var(--sun);font-weight:800}
 .mitmachen .phblock{background:rgba(242,179,61,.12);color:var(--on-sky);border-color:var(--sun)}
 @media (max-width:860px){.wege{grid-template-columns:1fr}}
+.mitglied{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;margin-bottom:32px;padding:26px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18)}
+.mitglied h3{margin:0 0 8px;font-family:var(--display);font-weight:400;font-size:1.6rem}
+.mitglied p{opacity:.88;margin:0 0 10px}
+.mitglied .knoepfe{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.tarife{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tarife div{text-align:center;padding:18px 10px;border-radius:14px;background:var(--on-sky);color:var(--sky)}
+.tarife b{display:block;font-family:var(--display);font-weight:400;font-size:2.2rem;line-height:1.05}
+.tarife span{font-size:.95rem;font-weight:700}
+.tarife small{display:block;margin-top:4px;font-size:.8rem;opacity:.7}
+@media (max-width:760px){.mitglied{grid-template-columns:1fr;padding:20px}.tarife b{font-size:1.9rem}}
 
 /* Bilanz */
 .bilanz-kopf{display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:end;margin-bottom:44px}
@@ -236,6 +246,7 @@ footer .wrap > *{min-width:0}
       <a href="#bilanz">Bilanz</a>
       <a href="#partner">Partner</a>
       <a href="#presse">Presse</a>
+      <a href="#mitglied">Mitglied werden</a>
       <a href="#mitmachen">Spenden</a>
     </nav>
   </div>
@@ -442,6 +453,21 @@ footer .wrap > *{min-width:0}
     <div class="kopf">
       <div class="eyebrow" style="color:var(--sun)">Unterstützen</div>
       <h2>So kannst du helfen</h2>
+    </div>
+    <div class="mitglied" id="mitglied">
+      <div>
+        <h3>Mitglied werden</h3>
+        <p>Als Mitglied trägst du unsere Arbeit dauerhaft mit und bist bei allem dabei, was wir für kleine Kämpfer auf die Beine stellen. Der Beitrag ist steuerlich absetzbar.</p>
+        <p>So geht's: Beitrittserklärung herunterladen, ausfüllen, unterschreiben und per E-Mail oder Post an uns schicken. Den Beitrag ziehen wir per SEPA-Lastschrift ein, oder du richtest einen Dauerauftrag ein.</p>
+        <div class="knoepfe">
+          <a class="btn voll" href="beitrittserklaerung.pdf">Beitrittserklärung (PDF)</a>
+          <a class="btn rand" href="mailto:herzensprojekt.kk@outlook.de?subject=Mitgliedsantrag%20Herzensprojekt%20kleine%20K%C3%A4mpfer">Per E-Mail senden</a>
+        </div>
+      </div>
+      <div class="tarife" aria-label="Mitgliedsbeitrag">
+        <div><b>5 €</b><span>im Monat</span><small>monatliche Abbuchung</small></div>
+        <div><b>60 €</b><span>im Jahr</span><small>eine Zahlung im Jahr</small></div>
+      </div>
     </div>
     <div class="wege">
       <div>
